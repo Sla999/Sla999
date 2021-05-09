@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>        
+        <form method="GET"> <!--указание метода GET-->
+            Игральным картам присвоены следующие порядковые номера в зависимости от их достоинства: "валет" - 11, "дама" - 12, "король" - 13, "туз" - 14. Порядковые номера остальных карт соответствуют их названиям("семерка", "восмерка" и т. д.). Вам нужно разработать программу, которая выводила достоинство карты по заданному номеру, который будет вводит пользователь..<br><br>
+            Введиде номер карты: <input type="text" name="number"><br><br>
+            <input type="submit" value="Вывод">
+        </form>
+        <?php
+            
+            if((isset($_GET['number']))&&(($_GET['number'])>6)&&(($_GET['number'])<15))
+            {
+                $ind = 0;
+                $arr_kart = array(7=>"семерка",8=>"восмерка",9=>"девятка",10=>"десятка",11=>"валет",12=>"дама",13=>"король",14=>"туз");
+                $num = $_GET['number'];
+                echo "Вы ввели {$num} это будет - ".$arr_kart["$num"];                           
+                                        
+            }
+            else{echo 'Этому значению нет соответствующей карты';}
+        
+            
+        ?>
+        
+    </body>
+</html>
