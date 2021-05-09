@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>        
+        <form method="GET"> <!--указание метода GET-->
+            Составить программу, которая бы по заданному числу выводила его название по китайском календаре.Заданное число не может быть меньше 1924.<br><br>
+            Введиде год: <input type="text" name="yеar"><br><br>
+            <input type="submit" value="Рассчитать">
+        </form>
+        <?php
+            
+            if(isset($_GET['yеar']))
+            {
+                $ind = 0;
+                $key = 0;
+                $yеar = $_GET['yеar'];
+                echo "<br/><br/>{$yеar} год";
+                if($yеar>=1924)
+                {
+                    $arr = array("крыса", "бык", "тигр","кролик","дракон","змея","лошадь","овца","обезьяна","петух","собака","свинья");
+                    for($i=0;$i<=($yеar-1924);$i++)
+                    {
+                        $ind = $i-(12*$key);                        
+                        if($ind==11)
+                        {
+                            $key++;
+                        } 
+                        if($yеar==(1924+$i))
+                        {
+                            echo " = {$arr[$ind]}";
+                        }
+                    
+                    }
+                }
+                else {
+                    echo "<br/>Ошибка! Вы ввели до 1924 года";     
+                }
+                
+            }
+            
+        
+            
+        ?>
+        
+    </body>
+</html>
