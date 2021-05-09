@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>        
+        <form method="GET"> <!--указание метода GET-->
+            Работа светофора запрограммирована таким образом: с начала каждого часа, в течении трех минут горит зеленый сигнал, следующие две минуты горит красный, дальше в течении трех минут - зеленый и т. д. Вам нужно разработать программу, которая по введенному числу определяла какого цвета сейчас горит сигнал.<br><br>
+            Введиде значение: <input type="text" name="min"><br><br>
+            <input type="submit" value="Результат">
+        </form>
+        <?php
+            
+            if(isset($_GET['min']))
+            {
+                
+                $min = $_GET['min'];
+                $keyr = 3;
+                $keyg = 0;
+                for($i=0;$i<$min-1;$i++)
+                {
+                    if($keyr<2)
+                    {
+                        $keyr++;
+                        //echo "r".$keyr ;
+                        
+                    }
+                    if($keyg<3)
+                    {
+                        ++$keyg;
+                        //echo "g".$keyg ;
+                        if($keyg==3)
+                        {
+                           $keyr=0;++$keyg; 
+                        }
+                    }
+                    
+                    if($keyr==2)
+                    {
+                       $keyg=0;$keyr++; 
+                    }                    
+                    
+                }
+                if(($keyr<=2)&&($keyr>=0))
+                {
+                   echo "<br>".$min." мин. - красный сигнал" ;  
+                }
+                if(($keyg<=3)&&($keyg>=0))
+                {
+                   echo "<br>".$min." мин. - зеленый сигнал" ;  
+                }
+                //echo $min ;                           
+                                        
+            }
+            
+        ?>
+        
+    </body>
+</html>
