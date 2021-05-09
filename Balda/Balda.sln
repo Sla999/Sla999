@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Balda", "Balda\Balda.vcxproj", "{CBD7BF83-D4F5-4941-A632-BA4B8BC5791C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBD7BF83-D4F5-4941-A632-BA4B8BC5791C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CBD7BF83-D4F5-4941-A632-BA4B8BC5791C}.Debug|Win32.Build.0 = Debug|Win32
+		{CBD7BF83-D4F5-4941-A632-BA4B8BC5791C}.Release|Win32.ActiveCfg = Release|Win32
+		{CBD7BF83-D4F5-4941-A632-BA4B8BC5791C}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C4414DEC-2D7F-49A1-9E7F-78072519F4CC}
+	EndGlobalSection
+EndGlobal
