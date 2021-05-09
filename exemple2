@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>        
+        <?php
+            echo 'Вам нужно создать массив и заполнить его случайными числами от 1 до 100 (ф-я rand). Далее, вычислить произведение тех элементов, которые больше ноля и у которых парные индексы. После вывести на экран элементы, которые больше ноля и у которых не парный индекс.<br/><br/><br/>';
+            //$arr = rand (5, 15);
+           $res = 1;
+            for($i=0;$i<20;$i++)
+            {
+                $arr[$i] = rand (-10, 10);
+            }
+            print_r($arr);
+            echo '<br/><br/>';
+            for($i=0;$i<20;$i++)
+            {
+                if($arr[$i]>0)
+                {
+                    $key = array_search($arr[$i], $arr);
+                    if((integer)($key/2)==$key/2)
+                    {
+                        echo $arr[$i]."; ";
+                        $res = $res*$arr[$i];
+                    }
+                    else 
+                    {
+                        $arr_nepar[$i]=$arr[$i];
+                    }
+                    
+                }
+            }
+            //echo $arr[1];
+            echo "<br/>{$res}<br/><br/>";
+          print_r($arr_nepar);
+            
+          
+          
+        ?>
+        
+    </body>
+</html>
